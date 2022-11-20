@@ -1,8 +1,9 @@
 {
   "expo": {
-    "name": "ocjene-app",
-    "slug": "ocjene-app",
+    "name": "real-ocjene-aplication",
+    "slug": "real-ocjene-aplication",
     "version": "1.0.0",
+    "owner": "fr1xel",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
