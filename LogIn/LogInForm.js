@@ -12,6 +12,11 @@ import { useState } from "react";
 import axios from "axios";
 
 export default function LogInForm({ setIsSigned, navigation }) {
+  const schema = yup.object().shape({
+    email: yup.string().email().required(),
+    password: yup.string().min(8).max(32).required(),
+  });
+
   const {
     control,
     handleSubmit,
@@ -19,21 +24,17 @@ export default function LogInForm({ setIsSigned, navigation }) {
     reset,
   } = useForm({ resolver: yupResolver(schema) });
 
-  const LogInHandler = async (data) => {
+  const logInHandler = async (data) => {
+    console.log(data)
     const user = await axios
-      .post(`https://grade-app-emel.herokuapp.com/login`, data)
+      .post(`https://026c-178-209-19-23.eu.ngrok.io/login`, data)
       .catch((err) => setPostError(err.message));
     if (user) {
       reset();
       setPostError("");
-      setIsSigned(true);
+      navigation.navigate("Home")
     }
   };
-
-  const schema = yup.object().shape({
-    email: yup.string().email().required(),
-    password: yup.string().min(8).max(32).required(),
-  });
 
   const [postError, setPostError] = useState("");
 
@@ -85,7 +86,7 @@ export default function LogInForm({ setIsSigned, navigation }) {
       )}
       <TouchableOpacity
         style={styles.logInSubmitButton}
-        onPress={handleSubmit(LogInHandler)}
+        onPress={handleSubmit(logInHandler)}
       >
         <Text style={styles.logInSubmitButtonText}>Submit</Text>
       </TouchableOpacity>

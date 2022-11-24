@@ -31,7 +31,7 @@ export const SignUpForm = ({ setIsSigned, navigation }) => {
   const signUpSubmit = async (data) => {
     console.log(data);
     const user = await axios
-      .post(`https://grade-app-emel.herokuapp.com/register`, data)
+      .post(`https://6df6-178-209-19-23.eu.ngrok.io/register`, data)
       .catch((err) => {
         setPostError(err.message);
         console.log(err);
@@ -39,7 +39,7 @@ export const SignUpForm = ({ setIsSigned, navigation }) => {
     if (user) {
       reset();
       setIsSigned(true);
-      setpostError("");
+      setPostError("");
     }
   };
   return (

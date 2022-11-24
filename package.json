@@ -18,7 +18,8 @@
     "react": "18.1.0",
     "react-hook-form": "^7.39.4",
     "react-native": "0.70.5",
-    "yup": "^0.32.11"
+    "yup": "^0.32.11",
+    "react-native-svg": "13.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
