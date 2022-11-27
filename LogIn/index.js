@@ -18,7 +18,7 @@ export default function LogIn({ navigation }) {
 
 const styles = StyleSheet.create({
   logInWindow: {
-    flex: 1,
+    display: "flex",
     backgroundColor: "purple",
     justifyContent: "center",
     alignItems: "center",

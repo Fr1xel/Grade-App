@@ -17,7 +17,7 @@ export default function SignUp({ navigation }) {
 
 const styles = StyleSheet.create({
   signUpScreen: {
-    flex: 1,
+    display: "flex",
     backgroundColor: "blue",
     justifyContent: "center",
     alignItems: "center",
