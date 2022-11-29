@@ -9,19 +9,19 @@ export const user = {
             title: "Programiranje",
             grades: [5,3,5,3,4],
             id: "emel_bas_glup",
-            averageScore: 4.3,
+            averageScore: 5,
         },
         {
             title: "Matematika",
             grades: [5,3,5,3,4],
             id: "emel_bas_retard",
-            averageScore: 4.3,
+            averageScore: 5,
         },
         {
             title: "Engleski",
             grades: [5,3,5,3,4],
-            id: "emel_bas_mentalno_glup",
-            averageScore: 4.3,
+            id: "emel_bas_mentalno_bolestan",
+            averageScore: 4,
         },
     ]
 }
